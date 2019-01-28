@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Forms</title>
+    <link rel="stylesheet" href="#">
+  </head>
+  <body>
+    <h1>Fill out the form!</h1>
+    <div class="container">
+      <form method="POST">
+        {{form.as_p}} <!-- it will align the form from top to bottom -->
+        <!-- to protect against bots etc -->
+        {% csrf_token %}
+        <input type="submit" name="btn btn-primary" value="Submit"> <!--also needs bootstrap -->
+
+      </form>
+
+
+    </div>
+  </body>
+</html>
